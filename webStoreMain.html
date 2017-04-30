@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Parts WebStore for Trucks </title>
+    </head>
+    <body>
+        <article>
+            <header>
+            <h1>Trucks Parts & Disassembly</h1>
+            <h2>WebStore of autoparts</h2>
+            <h3>Table of Contents</h3>
+           <ol>
+               <li><a title="Go to Introduction section" href="#introduction">Introduction</a></li>
+               <li><a title="Go to Methodology section" href="#methodology">Methodology</a></li>
+               <li><a title="Go to Work content section" href="#content">Work content</a></li>
+               <li><a title="Go to Elements section" href="#elements">Elements</a></li>
+               <li><a title="Go to Transformation section" href="#transformation">Transformation</a></li>
+               <li><a title="Go to Conclusion section" href="#conclusion">Conclusion</a></li>
+           </ol>
+       </header>
+            <br>
+       <br>
+       <h3><a id="introduction">Introduction to the WebStore</a></h3>
+            <p>
+                This project is created as a maquette of WebStore which I want to do. It represents customers with their contact info, shipping addresses, transactions details and information about purchase.
+            </p>
+        <br>
+        <h3><a id="methodology">Methodology. Technologies used.</a></h3>
+            <p>
+                This project was made with the following technologies:
+                </p>
+                <ul>
+                    <li>XML</li>
+                    <li>XML Schema</li>
+                    <li>XSL</li>
+                    <li>XSLT</li>
+                    <li>HTML</li>
+                </ul>
+            
+        <br>
+        <h3><a id="content">Work content. Project files.</a></h3>
+            <p>
+                This project consists of the following files:
+                </p>
+                <ol>
+                    <li><b>XML</b> File</li>
+                    <li><b>XSD</b> File</li>
+                    <li><b>XSLT</b> file</li>
+                    <li><b>HTML</b> file</li>
+                </ol>            
+        <br>
+        <h3><a id="elements">Elements of the XML</a></h3>
+            <p>
+            <b>webStore</b> is the root element, it contains 5 <b>customer</b> records as child elements of the <b>webStore</b>.
+            </p>
+            <p>Each record of <b>customer</b> has:
+                </p>
+                <section>
+                    <h4>Web Account</h4>
+                        <ul>
+                            <li>Email</li>
+                            <li>Nickname</li>
+                            <li>Password</li>
+                        </ul>
+                </section>
+                <section>
+                    <h4>Payment Info</h4>
+                        <ul>
+                            <li>Bank Card Type</li>
+                            <li>Card No</li>
+                            <li>Valid Thru</li>
+                            <li>Cvv</li>
+                            <li>Amount</li>
+                            <li>Currency</li>
+                            <li>Date of Payment</li>
+                           </ul>
+                </section>
+                <section>
+                    <h4>Shipping Information</h4>
+                        <ul>
+                            <li>Country</li>
+                            <li>City</li>
+                            <li>Street</li>
+                            <li>Number</li>
+                            <li>Zip</li>
+                            <li>Date of Shipping</li>
+                        </ul>
+                </section>
+                <section>
+                    <h4>Notification About Purchase</h4>
+                        <ul>
+                            <li>Message type</li>
+                            <li>Phone type</li>
+                        </ul>
+                </section>
+                <section>
+                    <h4>Items in basket</h4>
+                        <ul>
+                            <li>Title</li>
+                            <li>Category</li>
+                            <li>Country of Manufecture</li>
+                            <li>Brand</li>
+                            <li>Model</li>
+                            <li>Year</li>
+                            <li>Code</li>
+                            <li>Price</li>
+                            <li>Currency</li>
+                        </ul>
+                </section> 
+                <section>
+                    <h4>Bought Items Info</h4>
+                    <ul>
+                    <li>Title</li>
+                            <li>Category</li>
+                            <li>Country of Manufecture</li>
+                            <li>Brand</li>
+                            <li>Model</li>
+                            <li>Year</li>
+                            <li>Code</li>
+                            <li>Date of purchase</li>
+                            <li>Price</li>
+                            <li>Currency</li>
+                    </ul>
+                </section>
+              
+            
+        <br>
+        <h3><a id="transformation">HTML table Transformation</a></h3>
+            <p>
+                XSLT has been used for this transformation of XML to an HTML table with customers.
+            </p>
+            <p>
+      Records are sorted by amount it descending order. Customers that paid more than 150 highlithed with yellow color. For those who paid less than 150 with green.
+            </p>
+                <section>
+                    <table border="2">
+         <tr bgcolor="#EAEAEA">
+            <th>Nickname</th>
+            <th>Email</th>
+            <th>Amount</th>
+            <th>category</th>
+            <th>code</th>
+         </tr>
+         <tr>
+            <td>j-will</td>
+            <td>jwilliams@gmail.com</td>
+            <td style="background-color:#FFFF00">350</td>
+            <td style="background-color:#FF0000">Cooling System</td>
+            <td>79N47297YG298570G</td>
+         </tr>
+         <tr>
+            <td>d-hage</td>
+            <td>dh000@yahoo.com</td>
+            <td style="background-color:#ADFF2F">50</td>
+            <td style="background-color:#FF0000">Cab details</td>
+            <td>7AL865375R793624R</td>
+         </tr>
+         <tr>
+            <td>debblittle</td>
+            <td>mattmblittle@yahoo.com</td>
+            <td style="background-color:#FFFF00">1599</td>
+            <td style="background-color:#FF0000">Booths refrigirator</td>
+            <td>79N47297YG298570G</td>
+         </tr>
+         <tr>
+            <td>resha6-4</td>
+            <td>resha6@rambler.ru</td>
+            <td style="background-color:#FFFF00">10050</td>
+            <td style="background-color:#FF0000">Special equipment, cooling system</td>
+            <td>7AL865375R734824R</td>
+         </tr>
+         <tr>
+            <td>pdrah</td>
+            <td>petra.drahoradova@seznam.cz</td>
+            <td style="background-color:#ADFF2F">100</td>
+            <td style="background-color:#FF0000">Cooling System</td>
+            <td>7AL865375R7751954R</td>
+         </tr>
+      </table>
+      </section>
+        <br>
+        <h3><a id="conclusion">Conclusion</a></h3>
+            <p>
+                This XML based project represent a moquette of a possible Web Store.</p>
+   </article>
+   <br>
+   <br>
+   <br>
+   <footer>
+       <p>
+            Developed by Eugen Anisei. CULS, 2017.
+       </p>
+   </footer>
+</body>
+</html>

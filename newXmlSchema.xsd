@@ -1,0 +1,168 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WebStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="customer" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="firstName"/>
+              <xs:element type="xs:string" name="lastName"/>
+              <xs:element type="xs:byte" name="age"/>
+              <xs:element type="xs:string" name="gender"/>
+              <xs:element name="webAccount">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="email"/>
+                    <xs:element type="xs:string" name="nickname"/>
+                    <xs:element type="xs:string" name="password"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="paymentInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="bankCardType"/>
+                    <xs:element type="xs:long" name="cardNo"/>
+                    <xs:element type="xs:string" name="validThru"/>
+                    <xs:element type="xs:short" name="cvv"/>
+                    <xs:element type="xs:short" name="amount"/>
+                    <xs:element type="xs:string" name="currency"/>
+                    <xs:element type="xs:string" name="dateOfPayment"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="shippingInfo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="country"/>
+                    <xs:element type="xs:string" name="city"/>
+                    <xs:element type="xs:string" name="street"/>
+                    <xs:element type="xs:short" name="no"/>
+                    <xs:element type="xs:string" name="zip"/>
+                    <xs:element type="xs:string" name="dateOfShipping"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="notificationAboutPurchase">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="message" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="phone" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:long">
+                            <xs:attribute type="xs:string" name="type" use="optional"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="itemsInBasket">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="title" minOccurs="0"/>
+                    <xs:element type="xs:string" name="category" minOccurs="0"/>
+                    <xs:element type="xs:string" name="countryOfManufecture" minOccurs="0"/>
+                    <xs:element type="xs:string" name="model" minOccurs="0"/>
+                    <xs:element type="xs:short" name="year" minOccurs="0"/>
+                    <xs:element type="xs:string" name="code" minOccurs="0"/>
+                    <xs:element type="xs:short" name="price" minOccurs="0"/>
+                    <xs:element type="xs:string" name="currency" minOccurs="0"/>
+                    <xs:element name="boughtItemInfo" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="title"/>
+                          <xs:element type="xs:string" name="category"/>
+                          <xs:element type="xs:string" name="countryOfManufecture"/>
+                          <xs:element type="xs:string" name="brand" minOccurs="0"/>
+                          <xs:element type="xs:string" name="model"/>
+                          <xs:element type="xs:short" name="year"/>
+                          <xs:element type="xs:string" name="code"/>
+                          <xs:element type="xs:string" name="dateOfPurchase"/>
+                          <xs:element type="xs:byte" name="quantity" minOccurs="0"/>
+                          <xs:element type="xs:short" name="price"/>
+                          <xs:element type="xs:string" name="currency"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="item1" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="title"/>
+                          <xs:element type="xs:string" name="category"/>
+                          <xs:element type="xs:string" name="countryOfManufecture"/>
+                          <xs:element type="xs:string" name="model"/>
+                          <xs:element type="xs:short" name="year"/>
+                          <xs:element type="xs:string" name="code"/>
+                          <xs:element type="xs:short" name="price"/>
+                          <xs:element type="xs:string" name="currency"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="item2" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="title"/>
+                          <xs:element type="xs:string" name="category"/>
+                          <xs:element type="xs:string" name="countryOfManufecture"/>
+                          <xs:element type="xs:string" name="model"/>
+                          <xs:element type="xs:short" name="year"/>
+                          <xs:element type="xs:string" name="code"/>
+                          <xs:element type="xs:byte" name="price"/>
+                          <xs:element type="xs:string" name="currency"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="boughtItemInfo1" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="title"/>
+                          <xs:element type="xs:string" name="category"/>
+                          <xs:element type="xs:string" name="countryOfManufecture"/>
+                          <xs:element type="xs:string" name="brand"/>
+                          <xs:element type="xs:short" name="model"/>
+                          <xs:element type="xs:short" name="year"/>
+                          <xs:element type="xs:string" name="code"/>
+                          <xs:element type="xs:string" name="dateOfPurchase"/>
+                          <xs:element type="xs:short" name="price"/>
+                          <xs:element type="xs:string" name="currency"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="boughtItemInfo2" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="title"/>
+                          <xs:element type="xs:string" name="category"/>
+                          <xs:element type="xs:string" name="countryOfManufecture"/>
+                          <xs:element type="xs:string" name="model"/>
+                          <xs:element type="xs:short" name="year"/>
+                          <xs:element type="xs:string" name="code"/>
+                          <xs:element type="xs:string" name="dateOfPurchase"/>
+                          <xs:element type="xs:byte" name="quantity"/>
+                          <xs:element type="xs:byte" name="price"/>
+                          <xs:element type="xs:string" name="currency"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:byte" name="id" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
